@@ -1,12 +1,10 @@
-
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\DriverController;
 
 Route::get('/', function () {
-    return redirect()->route('kendaraan.index');
+    return redirect()->route('drivers.index');
 });
 
-Route::resource('kendaraan', KendaraanController::class)
-    ->except(['show']);
+Route::resource('drivers', DriverController::class);
